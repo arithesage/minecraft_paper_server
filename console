@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SERVER_PATH=$(realpath $(dirname $0))
+SCREEN_NAME=$(cat $SERVER_PATH/.screen)
+
+screen -r $SCREEN_NAME
+

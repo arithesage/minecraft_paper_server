@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección</title>
+    <script>
+        // Define la URL de redirección
+        var url = "https://essentialsx.net/downloads.html";
+
+        // Redirige automáticamente al abrir la página y actualiza el enlace
+        window.onload = () => {
+            // Redirigir automáticamente
+            window.location.href = url;
+
+            // Actualizar el enlace dinámicamente
+            const link = document.getElementById("redirectLink");
+            link.href = url;
+        };
+    </script>
+</head>
+<body>
+    <p>Redirigiendo... Si no ocurre automáticamente, <a id="redirectLink" href="#">haz clic aquí</a>.</p>
+</body>
+</html>

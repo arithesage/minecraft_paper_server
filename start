@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SCREEN_NAME=minecraft_server
+SERVER_PATH=$(realpath $(dirname $0))
+
+if [ "$1" == "once" ];
+then
+    screen -dmS $SCREEN_NAME bash -c "$SERVER_PATH/.startonce"
+    echo "${SCREEN_NAME}" > $SERVER_PATH/.screen
+else
+    screen -dmS $SCREEN_NAME bash -c "$SERVER_PATH/.start"
+    echo "${SCREEN_NAME}" > $SERVER_PATH/.screen
+fi
+
+echo "Server started. Execute 'console' for manage it."
+echo ""
+
