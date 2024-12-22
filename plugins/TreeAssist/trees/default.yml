@@ -56,6 +56,9 @@ Automatic Destruction:
 
   # Support silk touch affect when a player has it
   Use Silk Touch: true
+
+  # Drop items that did not fit into the inventory
+  Auto Add Drop Failed: false
 Block Statistics:
 
   # Count minecraft block breaking statistics when automatically breaking
@@ -287,4 +290,4 @@ Trunk:
   Uneven Bottom: false
 
 # Version number for automagical config updates
-Version: 7.305099964141846
+Version: 7.305500030517578

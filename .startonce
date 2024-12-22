@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SCRIPT_DIR=$(realpath $(dirname $0))
+SERVER="paper-1.21.3-81.jar"
+
+
+cd "$SCRIPT_DIR"
+
+
+java -jar $SERVER --nogui
+

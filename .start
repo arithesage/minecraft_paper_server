@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SERVER_PATH=$(script_dir)
+SERVER_EXEC="paper-1.21.3-81.jar "
+
+
+cd $SERVER_PATH
+
+
+while [ -f "./enabled" ]
+do
+    java -jar ./$SERVER_EXEC --nogui
+done

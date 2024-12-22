@@ -3,14 +3,17 @@
 SCREEN_NAME=minecraft_server
 SERVER_PATH=$(realpath $(dirname $0))
 
-if [ "$1" == "once" ];
+
+if ! [ -f "./enabled" ];
 then
-    screen -dmS $SCREEN_NAME bash -c "$SERVER_PATH/.startonce"
-    echo "${SCREEN_NAME}" > $SERVER_PATH/.screen
+    echo "The server is disabled. Rename the 'disabled' file to 'enabled'."
+    echo ""
+
 else
     screen -dmS $SCREEN_NAME bash -c "$SERVER_PATH/.start"
     echo "${SCREEN_NAME}" > $SERVER_PATH/.screen
 fi
+
 
 echo "Server started. Execute 'console' for manage it."
 echo ""

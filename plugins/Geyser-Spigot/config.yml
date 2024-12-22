@@ -12,15 +12,15 @@ bedrock:
   # There is no reason to change this unless you want to limit what IPs can connect to your server.
   address: 0.0.0.0
   # The port that will listen for connections
-  port: 53131
+  port: 19132
   # Some hosting services change your Java port everytime you start the server and require the same port to be used for Bedrock.
   # This option makes the Bedrock port the same as the Java port every time you start the server.
   # This option is for the plugin version only.
-  clone-remote-port: false
+  clone-remote-port: true
   # The MOTD that will be broadcasted to Minecraft: Bedrock Edition clients. This is irrelevant if "passthrough-motd" is set to true
   # If either of these are empty, the respective string will default to "Geyser"
-  motd1: "Bienvenido a Minecraft."
-  motd2: "Se bueno :)"
+  motd1: "Welcome to Minecraft!"
+  motd2: "Be nice :)"
   # The Server Name that will be sent to Minecraft: Bedrock Edition clients. This is visible in both the pause menu and the settings menu.
   server-name: "Paper-Minecraft Server"
   # How much to compress network traffic to the Bedrock client. The higher the number, the more CPU usage used, but

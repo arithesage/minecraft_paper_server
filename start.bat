@@ -1,30 +1,40 @@
 @ECHO OFF
 
 SET ROOT=%~dp0
-
 SET SERVER_PATH=%ROOT:~,-1%
-SET SERVER_EXEC=paper-1.20.1-31.jar
+
+
+SET SERVER_EXEC=paper-1.21.3-81.jar
+
+
+REM SET JAVA=C:\Apps\jdk-21.0.5+11\bin
+
+IF NOT "%JAVA%" == "" (
+    SET PATH=%PATH%;%JAVA%
+)
 
 
 IF NOT EXIST "%SERVER_PATH%\enabled" (
-    ECHO "Server disabled. Rename the 'disabled' file to 'enabled' to enable it.."
+    ECHO The server is disabled. Rename the 'disabled' file to 'enabled'."
 
 ) ELSE (
-    GOTO :start
+    GOTO :START
 )
 
 
-:start
+:START
 IF EXIST "%SERVER_PATH%\enabled" (
-    echo "Starting server..."
+    echo Starting server...
     echo.
 
-    java -jar "%SERVER_PATH%\%SERVER_EXEC"
+    java -jar "%SERVER_PATH%\%SERVER_EXEC" --nogui
 
-    goto :start
+    goto :START
 )
 
-echo "Terminado."
-echo.
+
+ECHO.
+ECHO Terminado.
+ECHO.
 
 PAUSE

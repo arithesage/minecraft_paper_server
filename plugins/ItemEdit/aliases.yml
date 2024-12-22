@@ -286,6 +286,15 @@ attribute:
   player_sneaking_speed: player_sneaking_speed
   player_submerged_mining_speed: player_submerged_mining_speed
   player_sweeping_damage_ratio: player_sweeping_damage_ratio
+  spawn_reinforcements: spawn_reinforcements
+  entity_interaction_range: entity_interaction_range
+  sweeping_damage_ratio: sweeping_damage_ratio
+  submerged_mining_speed: submerged_mining_speed
+  sneaking_speed: sneaking_speed
+  mining_efficiency: mining_efficiency
+  block_interaction_range: block_interaction_range
+  block_break_speed: block_break_speed
+  tempt_range: tempt_range
 operation:
   add_number: add_number
   add_scalar: add_scalar
@@ -371,3 +380,13 @@ itemrarity:
   uncommon: uncommon
   rare: rare
   epic: epic
+equip_group:
+  any: any
+  armor: armor
+  chest: chest
+  feet: feet
+  hand: hand
+  head: head
+  legs: legs
+  mainhand: mainhand
+  offhand: offhand
